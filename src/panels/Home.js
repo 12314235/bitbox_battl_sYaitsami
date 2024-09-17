@@ -6,6 +6,12 @@ export const Home = ({ id, fetchedUser }) => {
   const { photo_200, city, first_name, last_name } = { ...fetchedUser };
   const routeNavigator = useRouteNavigator();
 
+  const story = () => {
+    bridge.send('VKWebAppShowStoryBox', {
+      background_type: 'image',
+      url: 'https://random.imagecdn.app/500/150',
+    })
+  }
   return (
     <Panel id={id}>
       <PanelHeader>Главная</PanelHeader>
@@ -19,9 +25,9 @@ export const Home = ({ id, fetchedUser }) => {
 
       <Group header={<Header mode="secondary">Navigation Example</Header>}>
         <Div>
-          <Button stretched size="l" mode="secondary" onClick={() => routeNavigator.push('persik')}>
-            Покажите Персика, пожалуйста!
-          </Button>
+        <Button stretched size="l" mode="secondary" onClick={() => story()}>
+          октрыть редактор историй с рандомным фото
+        </Button>
         </Div>
       </Group>
     </Panel>
