@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Сайт для заказа прохладительных напитков. Мы предлагаем широкий ассортимент чаев и других освежающих напитков. Закажите сегодня и наслаждайтесь вкусом!">
+    <meta name="keywords" content="напитки, чай, бенто, доставка, прохладительные напитки">
+    <meta name="content-language" content="ru">
+    <title>Напитки на заказ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        .background {
+            background-image: url('background.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        header,
+        nav,
+        footer {
+            background-color: rgba(10, 20, 40, 0.2);
+            color: white;
+            text-align: center;
+            padding: 1.5em;
+            position: relative;
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        aside {
+            background-color: #eee;
+            padding: 1em;
+            margin-top: 1em;
+        }
+
+        code {
+            background-color: #7d9140;
+            padding: 0.5em;
+            display: block;
+            margin: 1em 0;
+            text-align: center;
+        }
+
+        .ascii-art {
+            background-color: black;
+            color: #eeeeee;
+            font-family: monospace;
+            white-space: pre;
+            text-align: center;
+        }
+
+        .drink-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+            padding: 2em;
+        }
+
+        .drink-card {
+            background-color: rgba(10, 20, 40, 0.5);
+            border: 2px solid rgba(10, 20, 40, 0.5);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: calc(25% - 2em);
+            margin: 1em;
+            padding: 1em;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .drink-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(19, 39, 78, 0.5);
+        }
+
+        .drink-card h3 {
+            color: rgba(255, 255, 255, 0.8);
+            font-family: "Poppins", sans-serif;
+        }
+
+        .drink-card p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .drink-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        .rating {
+            margin-top: 0.5em;
+            font-size: 1.2em;
+        }
+
+        .rating span {
+            color: gold;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .drink-card {
+                width: calc(33.33% - 2em);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .drink-card {
+                width: calc(50% - 2em);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .drink-card {
+                width: calc(100% - 2em);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <header>
+        <h1>Arizona Drinks</h1>
+    </header>
+
+    <nav>
+        <h3>
+            <a href="#about">О нас</a>
+            <a href="#bestsellers">Меню</a>
+            <a href="#contacts">Контакты</a>
+        </h3>
+    </nav>
+
+    <main>
+        <div class="drink-container">
+            <div class="drink-card">
+                <img src="images/arizona1.webp" alt="Аризона со вкусом чёрной вишни">
+                <h3>Чёрная Вишня</h3>
+                <p>Сочный вкус чёрной вишни с легкой кислинкой. Идеально подходит для освежения в жаркий день!</p>
+                <div class="rating">
+                    Рейтинг: <span>⭐⭐⭐⭐☆</span>
+                </div>
+            </div>
+
+            <div class="drink-card">
+                <img src="images/arizona2.webp" alt="Аризона со вкусом манго">
+                <h3>Манго</h3>
+                <p>Тропический вкус спелого манго, который подарит вам ощущение лета в любое время года.</p>
+                <div class="rating">
+                    Рейтинг: <span>⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+
+            <div class="drink-card">
+                <img src="images/arizona3.webp" alt="Аризона со вкусом зеленого чая">
+                <h3>Зеленый Чай</h3>
+                <p>Освежающий и полезный зеленый чай с легким ароматом жасмина. Отличный выбор для ценителей здоровья.</p>
+                <div class="rating">
+                    Рейтинг: <span>⭐⭐⭐⭐☆</span>
+                </div>
+            </div>
+            
+            <div class="drink-card">
+                <img src="images/arizona4.webp" alt="Аризона со вкусом лимона и мяту">
+                <h3>Лимон и Мята</h3>
+                <p>Непревзойденное сочетание лимона и мяты для мгновенного освежения и бодрости.</p>
+                <div class="rating">
+                    Рейтинг: <span>⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+            
+            <div class="drink-card">
+                <img src="images/arizona5.webp" alt="Аризона со вкусом дыни">
+                <h3>Дыня</h3>
+                <p>Сладкий и ароматный вкус дыни, который подарит вам незабываемые моменты лета.</p>
+                <div class="rating">
+                    Рейтинг: <span>⭐⭐⭐⭐☆</span>
+                </div>
+            </div>
+            
+            <div class="drink-card">
+                <img src="images/arizona6.webp" alt="Аризона со вкусом клубники">
+                <h3>Клубника</h3>
+                <p>Нежный вкус спелой клубники, идеально подходящий для теплых вечеров на террасе.</p>
+                <div class="rating">
+                    Рейтинг: <span>⭐⭐⭐⭐☆</span>
+                </div>
+            </div>
+            
+            <div class="drink-card">
+                <img src="images/arizona7.webp" alt="Аризона со вкусом персика">
+                <h3>Персик</h3>
+                <p>Сладкий и сочный вкус персика, который освежает и радует.</p>
+                <div class="rating">
+                    Рейтинг: <span>⭐⭐⭐⭐☆</span>
+                </div>
+            </div>
+            
+            <div class="drink-card">
+                <img src="images/arizona8.webp" alt="Аризона со вкусом малины">
+                <h3>Малина</h3>
+                <p>Яркий и насыщенный вкус малины, который подарит вам заряд бодрости.</p>
+                <div class="rating">
+                    Рейтинг: <span>⭐⭐⭐⭐☆</span>
+                </div>
+            </div>
+            
+            <div class="drink-card">
+                <img src="images/arizona9.webp" alt="Аризона со вкусом яблока">
+                <h3>Яблоко</h3>
+                <p>Свежий и кислый вкус яблока, который идеально подходит для лета и отдыха.</p>
+                <div class="rating">
+                    Рейтинг: <span>⭐⭐⭐⭐☆</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Контакты</h3>
+        <p>Email: info@arizonadrinks.com</p>
+        <p>Телефон: +7 123 456 7890</p>
+    </footer>
+</body>
+
+</html>
