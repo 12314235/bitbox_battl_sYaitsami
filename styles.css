@@ -22,11 +22,11 @@ footer {
     background-color: rgba(10, 20, 40, 0.2);
     color: white;
     text-align: center;
-    position: relative;
     width: 100%;
     z-index: 10;
     backdrop-filter: blur(5px);
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    bottom: 0;
 }
 
 header {
@@ -58,14 +58,23 @@ nav {
     align-items: center;
 }
 
-
+header a,
 nav a {
     color: white;
     margin: 0 20px;
     text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.active-href,
+header a:hover,
+nav a:hover {
+    transform: scale(1.1);
+    color: #FFD700;
 }
 
 main {
+    flex: 1;
     padding: 2em;
     margin-top: 144px;
     position: relative;
@@ -226,4 +235,10 @@ article p {
     nav a {
         margin: 0 10px;
     }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
