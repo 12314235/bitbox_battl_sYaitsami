@@ -101,6 +101,47 @@ main {
     box-shadow: 0 6px 12px rgba(19, 39, 78, 0.5);
 }
 
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+.table-header {
+    background-color: rgba(10, 20, 40, 0.7);
+    display: contents;
+}
+
+.table-header-item {
+    font-weight: bold;
+    padding: 1em;
+    text-align: center;
+}
+
+.table-row {
+    display: contents;
+}
+
+.table-item {
+    padding: 1em;
+    text-align: center;
+}
+
+.table-row:nth-child(even) .table-item {
+    background-color: rgba(10, 20, 40, 0.3);
+}
+
+.table-row:nth-child(odd) .table-item {
+    background-color: rgba(10, 20, 40, 0.1);
+}
+
 @media screen and (max-width: 1200px) {
     .drink-card {
         width: calc(33.33% - 2em);
